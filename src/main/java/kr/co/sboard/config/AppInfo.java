@@ -13,9 +13,8 @@ import org.springframework.beans.factory.annotation.Value;
 public class AppInfo {
 
     @Value("${spring.application.name}")
-    private String appName;
+    private String version;
 
     @Value("${spring.application.version}")
-    private String appVersion;
-
+    private String appInfo;
 }
