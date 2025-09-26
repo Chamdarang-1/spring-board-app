@@ -10,15 +10,13 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class AppConfig implements WebMvcConfigurer {
 
-    @Autowired
-    private AppInfo appInfo;
-
-
     @Bean
     public AppInfo getAppInfo() {
         return new AppInfo();
     }
 
+    @Autowired
+    private AppInfo appInfo;
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
