@@ -1,10 +1,16 @@
 package kr.co.sboard.controller;
 
+import kr.co.sboard.config.AppInfo;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+@RequiredArgsConstructor
 @Controller
 public class UserController {
+
 
     @GetMapping("/user/info")
     public String info(){
@@ -25,5 +31,6 @@ public class UserController {
     public String terms(){
         return "user/terms";
     }
+
 
 }
