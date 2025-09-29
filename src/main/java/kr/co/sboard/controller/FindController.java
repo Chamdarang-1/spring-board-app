@@ -26,5 +26,4 @@ public class FindController {
         return "find/userId";
     }
 
-
 }

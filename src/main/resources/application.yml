@@ -16,14 +16,14 @@ spring:
   datasource:
     driver-class-name: oracle.jdbc.driver.OracleDriver
     password: 1234
-    url: jdbc:oracle:thin:@//43.202.252.219:1522/XEPDB1
-    username: joseph8034
+    url: jdbc:oracle:thin:@//43.202.252.219:1522/XE
+    username: sboard
   devtools:
     livereload:
       enabled: true
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
     properties:
@@ -31,13 +31,32 @@ spring:
         format_sql: true
         show_sql: true
 
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: joseph8034@gmail.com
+    password: fleepeouirxqhzfn
+    properties:
+      mail:
+        smtp:
+          auth: true
+          timeout: 5000
+          starttls:
+            enable: true
+
   security:
     user:
       name: user
       password: 1234
       roles: ADMIN
 
+  servlet:
+    multipart:
+      location: upload
+      max-file-size: 10MB
 
-jwt:
-  issuer: joseph8034@naver.com
-  secret: BDE363989DFF426DCEB7C361DA13F100
+
+
+#jwt:
+#  issuer: joseph8034@naver.com
+#  secret: BDE363989DFF426DCEB7C361DA13F100
